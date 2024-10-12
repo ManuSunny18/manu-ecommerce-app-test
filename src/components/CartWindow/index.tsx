@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { FC, ReactElement, ReactInstance,ComponentType, ReactNode, useContext, useState } from "react";
 import ReactDOM from 'react-dom';
 import { useSelector } from "react-redux";
 import { RootState } from "@store/store";
@@ -9,7 +9,17 @@ import { IoMdArrowForward } from "react-icons/io";
 import { FiTrash2 } from "react-icons/fi";
 import CartProduct from '@components/CartProduct'
 
-function SideWindowRoot({ children }) {
+type SideWindowRootProps = {
+    children: ReactNode
+}
+type CartWindowProps = {
+    TriggerComponent: FC
+}
+  
+/*
+This is the portal for the side window
+*/
+function SideWindowRoot({ children }:SideWindowRootProps) {
     const sideWindowContainer:HTMLElement = document.getElementById('sideWindowContainer') || document.body;
     return ReactDOM.createPortal(
       <div className="modal">
@@ -19,12 +29,17 @@ function SideWindowRoot({ children }) {
     );
   }
 
+/*
+  cart side window
+*/
 const CartWindow = ({
     TriggerComponent,
-}) => {
+}:CartWindowProps) => {
     const dispatch = useDispatch();
     const cartItems = useSelector((state: RootState) => state.cartReducer.cart);
-    const addedItems = cartItems.length
+    const addedItems = cartItems.length || 0
+
+    //local state to show/hide the window
     const [isOpen, setIsOpen] = useState(false)
     const handleClose = ()=>{
         setIsOpen(false)

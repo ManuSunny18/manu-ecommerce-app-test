@@ -65,6 +65,9 @@ const config = (envVars) => {
           }
         ]
       },
+      /*
+        reducing the file size for effective caching
+      */
       optimization:{
         minimize:true,
         splitChunks: {

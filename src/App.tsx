@@ -1,22 +1,22 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Provider } from "react-redux";
-import Layout from './layout'
-import Home from './pages/Home'
-import store from "./store/store.ts";
+import Layout from 'layout'
+import Home from '@pages/Home'
+import store from "@store/store";
+
+/*
+    Lazy loading the next pages
+*/
 const Store = React.lazy(() => import('@pages/Store'));
 const Cart = React.lazy(() => import('@pages/Cart'));
 const ProductDetails  =  React.lazy(() => import('@pages/ProductDetails'));
-
-type LinkActive = { isActive: boolean }
-
-const isActiveLink = ({ isActive }: LinkActive) => `link ${isActive ? 'active' : ''}`
 
 
 const App = () =>{
     return <Router>
         <Provider store={store}>
-    <Routes>
+            <Routes>
             <Route path="/" element={<Layout />}>
                 <Route index element={<Home />} />
                 <Route path="store" element={

@@ -9,6 +9,7 @@ const plugins: webpack.WebpackPluginInstance[] = [
   new HTMLWebpackPlugin({
     template: './public/index.html', // you have to have the template file
   }),
+  //generating the css files seperate
   new MiniCssExtractPlugin({
     filename:"[name].[contenthash:12].css"
   }),
@@ -62,6 +63,9 @@ const config: webpack.Configuration = {
                 name: '[name].[hash:8].[ext]',
               },
             },
+            /*
+              Image loading and optimising process, need to play with the values for the optimised result
+            */
             {
               loader: 'image-webpack-loader',
               options: {

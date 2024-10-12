@@ -33,6 +33,7 @@ you will be able to list the products and  manage your cart, just basic actions
 
 ## Getting Started
 
+
 ### Prerequisites
 
 This project requires node 18 above version to be installed in your system. 
@@ -88,7 +89,8 @@ Please follow the following steps for successful installation:
 
 ## Roadmap
 
-We just completed a basic set up to start the development process, however api layer, caching all set up need to be completed
+We just completed a basic set up to start the development process, however api layer, caching all set up need to be completed.
+
 
 - [x] Add react typescript tailwind
 - [ ] Add Api middleware

@@ -17,6 +17,7 @@ const config = merge(
       filename: 'index.js',
     },
     plugins:[
+      //hot reloading the quick react changes with out refresh
       new ReactRefreshWebpackPlugin()
     ],
     module:{

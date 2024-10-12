@@ -1,10 +1,15 @@
 import { Link, useLocation  } from "react-router-dom";
 import CartWindow from '@components/CartWindow'
+import Product from '@types/product'
 
+type CartButtonProps = {
+  onItemClick:VoidFunction
+  addedItems: number
+}
 const CartButton = ({
   onItemClick,
   addedItems
-})=>{
+}:CartButtonProps)=>{
     return <li 
             onClick={(e)=>{
               onItemClick()
@@ -35,6 +40,11 @@ const Header = () => {
                   <Link  to="/store">Store</Link>
                   <span className="absolute -bottom-0 left-0 w-0 h-1 bg-blue-400 transition-all group-hover:w-full"></span>
                 </li>
+                {
+                /*
+                  To manage the show/hide state internally to the component we are sending the button component to the side window
+                */
+                }
                 <CartWindow 
                   TriggerComponent={CartButton}/>
             </ul>

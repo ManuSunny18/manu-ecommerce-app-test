@@ -12,6 +12,11 @@ interface RemoveItemPayload {
 }
   
 
+/*
+    manage the cart related logic here
+    add product
+    manage quantity
+*/
 
 const cartSlice = createSlice({
   name: "cart",

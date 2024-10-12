@@ -5,6 +5,10 @@ import { decreaseQuantity, addToCart, removeItem } from "@store/slice/cartSlice"
 import { IoMdAdd, IoMdClose, IoMdRemove } from "react-icons/io";
 
 
+/*
+render a product in cart
+*/
+
 const CartProduct = ({ productDetails }) => {
     const dispatch = useDispatch();
     // destructure item
