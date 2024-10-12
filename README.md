@@ -62,12 +62,12 @@ Please follow the following steps for successful installation:
 
 ## Project Overview
     package.json
-        start : TO run the project in developement mode
-        build : Will generate the optimised bundle for the production
+        start : To run the project in development mode
+        build : Will generate the optimized bundle for the production
         analyse : Can analyse the bundle size and dependencies 
         test : run test cases
     webpack
-        developement and production build configurations
+        development and production build configurations
     tailwind.config.js
         front end design system configuration
     src
@@ -97,12 +97,13 @@ We just completed a basic set up to start the development process, however api l
   - [x] regular component testing samples
   - [x] mock data for product listing
   - [ ] redux testing
-  - [x] user event testing
+  - [ ] user event testing
 - [ ] Paginated store page
 - [ ] Saving the cart informaion
 - [ ] PWA
 - [ ] Replace useEffect with react query
 - [ ] Add caching
 - [ ] gzip setup
+- [ ] minimize the images
 - [ ] static server setup
 
