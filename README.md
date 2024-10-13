@@ -97,6 +97,9 @@ We just completed a basic set up to start the development process, however api l
 
 - [x] Add react typescript tailwind
 - [x] Add Api middleware
+    - [ ] lazy query / mutate hooks
+    - [ ] caching
+    - [ ] Api end points to env
 - [x] Add redux 
 - [x] Testing set up
   - [x] regular component testing samples
@@ -104,10 +107,11 @@ We just completed a basic set up to start the development process, however api l
   - [ ] redux testing
   - [ ] user event testing
 - [x] Paginated store page
+- [ ] virtualised pagination for store page to improve the perfomance
 - [ ] Saving the cart informaion
 - [ ] PWA
 - [ ] Replace useEffect with react query
-- [ ] Add caching
+- [ ] Add assets caching
 - [ ] gzip setup
 - [ ] minimize the images
 - [ ] static server setup
