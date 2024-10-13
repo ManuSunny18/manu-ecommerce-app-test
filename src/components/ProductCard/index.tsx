@@ -17,6 +17,7 @@ const ProductCard = ({productItemData }: Props): React.JSX.Element => {
         dispatch(addToCart(product));
         toast("Added to cart");
       };
+    const urlId = id.split("_")[0]
     return (
         <div data-testid={`product_${productItemData.id}`}>
             <div className="border border-[#e4e4e4] h-[300px] mb-4 relative overflow-hidden group transition">
@@ -42,7 +43,7 @@ const ProductCard = ({productItemData }: Props): React.JSX.Element => {
                     </div>
                 </button>
                 <Link
-                    to={`/view/${id}`}
+                    to={`/view/${urlId}`}
                     className="w-12 h-12 bg-white flex justify-center items-center text-primary drop-shadow-xl"
                 >
                     <BsEyeFill />
@@ -52,7 +53,7 @@ const ProductCard = ({productItemData }: Props): React.JSX.Element => {
             {/* category, title & price */}
             <div>
                 <div className="tex-sm capitalize text-gray-500 mb-1">{category}</div>
-                <Link to={`/view/${id}`}>
+                <Link to={`/view/${urlId}`}>
                     <h2 className="font-semibold mb-1">{title}</h2>
                 </Link>
 

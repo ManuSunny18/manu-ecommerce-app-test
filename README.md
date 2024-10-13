@@ -30,6 +30,7 @@ you will be able to list the products and  manage your cart, just basic actions
 - [webpack](https://webpack.js.org/)
 - [jest](https://jestjs.io/)
 - [sass](https://sass-lang.com/)
+- [RTK Query](https://redux-toolkit.js.org/rtk-query/overview)
 
 ## Getting Started
 
@@ -86,6 +87,8 @@ Please follow the following steps for successful installation:
             redux store to manage the state
         types
             typescript utils
+        api
+            all the api query set up goes here
 
 ## Roadmap
 
@@ -93,14 +96,14 @@ We just completed a basic set up to start the development process, however api l
 
 
 - [x] Add react typescript tailwind
-- [ ] Add Api middleware
+- [x] Add Api middleware
 - [x] Add redux 
 - [x] Testing set up
   - [x] regular component testing samples
   - [x] mock data for product listing
   - [ ] redux testing
   - [ ] user event testing
-- [ ] Paginated store page
+- [x] Paginated store page
 - [ ] Saving the cart informaion
 - [ ] PWA
 - [ ] Replace useEffect with react query
